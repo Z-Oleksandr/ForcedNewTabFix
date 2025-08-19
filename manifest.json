@@ -1,9 +1,11 @@
 {
   "manifest_version": 3,
   "name": "NewTabFix",
-  "version": "1.0",
-  "permissions": ["tabs"],
+  "descriptions": "Restores your right to choose the Page which opens on NewTabOpen.",
+  "version": "2.0",
+  "permissions": ["tabs", "webNavigation", "storage"],
   "background": {
     "service_worker": "background.js"
-  }
+  },
+  "options_page": "options.html"
 }

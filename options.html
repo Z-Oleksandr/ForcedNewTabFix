@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>NewTabFix Settings</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body { 
+      display: flex;
+      flex-direction: column;
+      font-family: 'Orbitron', sans-serif; 
+      padding: 1em; 
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+      transition: background-color 0.3s, color 0.3s;
+    }
+    h1 {
+      font-weight: 600;
+      letter-spacing: 2px;
+      margin-bottom: 1em;
+    }
+    label { display: block; margin: 0.5em; }
+    #banner-settings-saved {
+      display: none;
+      background-color: green;
+      margin: 1em;
+      padding: 3em;
+      border: 2px solid black;
+      color: white;
+      border-radius: 5px;
+      width: 10vw;
+      height: 3vh;
+      min-height: 30px;
+      min-width: 60px;
+      align-items: center;
+      justify-content: center;
+    }
+    #banner-settings-saved p {
+      font-size: medium;
+    }
+    body.light {
+      background-color: #f5f5f5;
+      color: #111;
+    }
+    body.dark {
+      background-color: #111;
+      color: #f5f5f5;
+    }
+
+    #theme-toggle {
+      margin: 1em;
+      padding: 0.5em 1em;
+      cursor: pointer;
+      border: none;
+      border-radius: 5px;
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1em;
+      background-color: #444;
+      color: white;
+      transition: background-color 0.3s;
+    }
+
+    #theme-toggle:hover {
+      background: #666;
+    }
+  </style>
+</head>
+<body class="dark">
+  <h1>New Tab Override Fix - Settings</h1>
+
+  <label>
+    <input type="radio" name="mode" value="default"> Default Mode
+  </label>
+  <label>
+    <input type="radio" name="mode" value="fallback"> Fallback Mode
+  </label>
+
+  <label>
+    Forced Website URL <input type="text" id="orgUrl" size="40" placeholder="Enter url to redirect from">
+  </label>
+
+  <button id="save">Save</button>
+  <button id="theme-toggle">Switch to Light Mode</button>
+
+  <div id="banner-settings-saved">
+    <p>Settings saved!</p>
+  </div>
+
+  <script src="options.js"></script>
+</body>
+</html>
