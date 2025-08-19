@@ -1,5 +1,5 @@
 chrome.tabs.onCreated.addListener((tab) => {
-  if (tab.pendingUrl && !tab.pendingUrl.startsWith("chrome://new-tab-page")) {
+  if (tab.pendingUrl && tab.pendingUrl.startsWith("chrome://newtab/")) {
     chrome.tabs.update(tab.id, { url: "chrome://new-tab-page" });
   }
 });
